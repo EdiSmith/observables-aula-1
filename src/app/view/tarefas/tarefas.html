@@ -21,6 +21,12 @@
 
   <!-- Lista de tarefas -->
   <div class="task-list">
+
+    <div class="task-card" *ngFor="let tarefa of tarefas">
+      <h4>{{ tarefa.titulo }}</h4>
+      <p>Status: {{ tarefa.concluida ? 'Concluída' : 'Pendente' }}</p>
+    </div>
+
     <div class="task-card">
       <h4>Comprar materiais</h4>
       <p>Comprar papel, caneta e envelope</p>
@@ -41,4 +47,8 @@
       <p>Agendar backup do servidor</p>
     </div>
   </div>
+</div>
+
+<div id="btn-box-adicionar" >
+  <button id="btn-adicionar">ADICIONAR TAREFA</button>
 </div>
